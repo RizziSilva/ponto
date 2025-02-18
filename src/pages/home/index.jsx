@@ -1,6 +1,6 @@
 import React from 'react'
-import './style.scss'
+import style from './styles.module.scss'
 
 export function Home() {
-  return <div>Home</div>
+  return <div className={style['home-page']}>Home</div>
 }

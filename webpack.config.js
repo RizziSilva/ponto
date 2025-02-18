@@ -24,7 +24,24 @@ module.exports = (env = {}, arg) => {
           },
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.module\.scss$/,
+          use: [
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  namedExport: false,
+                  localIdentName: '[name]_[local]_[hash:base64:5]',
+                },
+              },
+            },
+            'sass-loader',
+          ],
+        },
+        {
+          test: /\.scss$/,
+          exclude: /\.module\.scss$/,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',

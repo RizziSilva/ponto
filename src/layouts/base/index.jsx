@@ -1,10 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router'
-import './style.scss'
+import style from './style.module.scss'
 
 export function BaseLayout() {
   return (
-    <div id="base-layout">
+    <div>
       <Outlet />
     </div>
   )
