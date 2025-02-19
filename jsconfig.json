@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "ESNext",
     "baseUrl": "./src",
     "paths": {
       "app-constants": ["constants/*"],
-      "app-pages": ["pages/*"]
+      "app-pages": ["pages/*"],
+      "app-styles": ["styles/*"],
+      "app-components": ["components/*"],
+      "app-statics": ["statics/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

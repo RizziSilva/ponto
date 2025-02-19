@@ -33,6 +33,7 @@ module.exports = (env = {}, arg) => {
                 modules: {
                   namedExport: false,
                   localIdentName: '[name]_[local]_[hash:base64:5]',
+                  exportLocalsConvention: 'as-is',
                 },
               },
             },
@@ -47,6 +48,10 @@ module.exports = (env = {}, arg) => {
             'css-loader',
             'sass-loader',
           ],
+        },
+        {
+          test: /\.(png|jpeg|svg)$/,
+          type: 'asset/resource',
         },
       ],
     },
@@ -69,6 +74,9 @@ module.exports = (env = {}, arg) => {
       alias: {
         'app-constants': path.resolve(__dirname, 'src/constants'),
         'app-pages': path.resolve(__dirname, 'src/pages'),
+        'app-components': path.resolve(__dirname, 'src/components'),
+        'app-styles': path.resolve(__dirname, 'src/styles'),
+        'app-statics': path.resolve(__dirname, 'src/statics'),
       },
     },
   }

@@ -1,0 +1,78 @@
+@use 'app-styles/includes.scss' as *;
+
+$header-background-color: #ff3029;
+
+.container-header {
+  background-color: $header-background-color;
+  display: flex;
+  height: 75px;
+  justify-content: center;
+  width: 100%;
+
+  > .container-content {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    max-width: $content-width;
+    width: 100%;
+
+    > .container-options {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: flex-start;
+
+      > .link {
+        height: 100%;
+
+        > .image {
+          height: 100%;
+          margin-right: 100px;
+        }
+      }
+
+      > .container-option {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+
+        > .option {
+          align-items: center;
+          color: $tan;
+          display: flex;
+          font-size: 16px;
+          font-weight: 400;
+          height: 100%;
+          justify-content: center;
+          padding: 0 15px;
+          text-decoration: none;
+
+          &.active {
+            border-bottom: 4px solid $tan;
+          }
+        }
+      }
+    }
+
+    > .container-logout {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: flex-start;
+
+      > .name {
+        color: $tan;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      > .button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
